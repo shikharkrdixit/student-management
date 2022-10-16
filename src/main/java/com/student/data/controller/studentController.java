@@ -6,6 +6,8 @@ import com.student.data.service.impl.studentServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -28,8 +30,13 @@ public class studentController {
     public String createStudentForm(Model model){
 
         Student student = new Student();
-        model.addAttribute("student",student);
+        model.addAttribute("student", student);
         return "create_student";
+    }
 
+    @PostMapping("/students/create")
+    public String createStudent(@ModelAttribute("student") Student student){
+        studentService.saveStudent(student);
+        return "redirect:/students";
     }
 }
