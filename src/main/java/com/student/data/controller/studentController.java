@@ -23,4 +23,13 @@ public class studentController {
         model.addAttribute("students", studentService.findAllStudents());
         return "students";
     }
+
+    @GetMapping("/students/new")
+    public String createStudentForm(Model model){
+
+        Student student = new Student();
+        model.addAttribute("student",student);
+        return "create_student";
+
+    }
 }

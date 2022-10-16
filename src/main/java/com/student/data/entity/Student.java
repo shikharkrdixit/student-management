@@ -14,7 +14,7 @@ public class Student {
     private String firstName;
 
     @Column(name = "last_name")
-    private String LastName;
+    private String lastName;
 
     @Column(name = "email", nullable = false)
     private String emailId;
@@ -24,7 +24,7 @@ public class Student {
 
     public Student(String firstName, String lastName, String emailId) {
         this.firstName = firstName;
-        LastName = lastName;
+        this.lastName = lastName;
         this.emailId = emailId;
     }
 
@@ -45,11 +45,11 @@ public class Student {
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        lastName = lastName;
     }
 
     public String getEmailId() {
