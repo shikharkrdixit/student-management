@@ -7,6 +7,22 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Student Data Management</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/students}">Homepage</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/students/new}">Add Student</a>
+        </li>
+    </ul>
+</nav>
+<br>
+<br>
     <div class = "container">
         <div class = "row">
             <h1> List of Students</h1>
