@@ -49,7 +49,7 @@ public class Student {
     }
 
     public void setLastName(String lastName) {
-        lastName = lastName;
+        this.lastName = lastName;
     }
 
     public String getEmailId() {
