@@ -9,4 +9,8 @@ public interface iStudentService {
     public List<Student> findAllStudents();
 
     Student saveStudent(Student student);
+
+    Student getStudentById(Long id);
+
+    Student updateStudent(Student student);
 }

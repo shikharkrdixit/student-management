@@ -29,4 +29,14 @@ public class studentServiceImpl implements iStudentService {
     public Student saveStudent(Student student) {
         return studentRepo.save(student);
     }
+
+    @Override
+    public Student getStudentById(Long id) {
+        return studentRepo.findById(id).get();
+    }
+
+    @Override
+    public Student updateStudent(Student student) {
+        return studentRepo.save(student);
+    }
 }
