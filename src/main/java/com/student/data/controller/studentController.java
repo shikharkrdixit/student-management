@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.List;
 
 @Controller
 public class studentController {
@@ -52,4 +51,11 @@ public class studentController {
         studentService.updateStudent(student);
         return "redirect:/students";
     }
+
+    @GetMapping("/students/delete/{id}")
+    public String remove(@PathVariable Long id, Model model){
+        studentService.deleteStudentById(id);
+        return "redirect:/students";
+    }
+
 }

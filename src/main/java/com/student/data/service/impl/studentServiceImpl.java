@@ -3,7 +3,6 @@ package com.student.data.service.impl;
 import com.student.data.entity.Student;
 import com.student.data.repository.studentRepository;
 import com.student.data.service.iStudentService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,5 +37,10 @@ public class studentServiceImpl implements iStudentService {
     @Override
     public Student updateStudent(Student student) {
         return studentRepo.save(student);
+    }
+
+    @Override
+    public void deleteStudentById(Long id) {
+        studentRepo.deleteById(id);
     }
 }
